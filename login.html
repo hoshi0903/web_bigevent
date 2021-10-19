@@ -48,7 +48,7 @@
         <!-- 注册的div -->
         <div class="reg-box">
             <!-- 注册的表单 -->
-            <form class="layui-form" action="">
+            <form class="layui-form" id="form_reg">
                 <!-- 用户名 -->
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-username"></i>
@@ -62,13 +62,13 @@
                 <!-- 请确认密码 -->
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-password"></i>
-                    <input type="repassword" name="password" required lay-verify="required" placeholder="再次确认密码" autocomplete="off" class="layui-input"/>
+                    <input type="password" name="repassword" required lay-verify="required|pwd|repwd" placeholder="再次确认密码" autocomplete="off" class="layui-input"/>
                 </div>
 
                 <!-- 按钮 -->
                 <div class="layui-form-item">
                 <!-- 普通按钮和表单提交按钮的区别就是 lay-submit属性 -->
-                <button class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit lay-filter="formDemo">登录</button>
+                <button class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit lay-filter="formDemo">注册</button>
             </div>
             <div class="layui-form-item links">
                 <a href="javascript:;" id="link_login">去登录</a>
