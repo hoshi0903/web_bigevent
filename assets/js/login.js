@@ -32,14 +32,18 @@ $(function(){
     $('#form_reg').on('submit',function(e){
         // 阻止默认行为
         e.preventDefault();
-
         // 发起ajax的post请求
-        $.post('http://ajax.frontend.itheima.net/api/reguser', { username: $('#form_reg [name=username]').val(), password: $('#form_reg [name=password]').val() }, 
+        var data = {
+            username: $('#form_reg [name=username]').val(),
+            password: $('#form_reg [name=password]').val()
+        }
+        console.log(data);
+        $.post("http://api-breakingnews-web.itheima.net/api/reguser", data, 
         function(res){
-            if(res.status!==0) {
-                    return layui.msg(res.massage);
+            if(res.status !== 0) {
+                    return console.log(res.message);
             }
-            layui.msg('注册成功，请登录！')
+            console.log('注册成功，请登录！');
         })
     })
 })
