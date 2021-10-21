@@ -40,7 +40,7 @@ $(function(){
             password: $('#form_reg [name=password]').val()
         }
         console.log(data);
-        $.post("http://api-breakingnews-web.itheima.net/api/reguser", data, 
+        $.post("/api/reguser", data, 
         function(res){
             if(res.status !== 0) {
                     return layer.msg(res.message);
@@ -56,7 +56,7 @@ $(function(){
         // 阻止默认行为
         e.preventDefault();
         $.ajax({
-            url:'http://api-breakingnews-web.itheima.net/api/login',
+            url:'/api/login',
             method:'POST',
             // 快速获取表单中的数据
             data:$(this).serialize(),
@@ -69,7 +69,7 @@ $(function(){
                 // Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDA0ODAsInVzZXJuYW1lIjoi6IOW57qiIiwicGFzc3dvcmQiOiIiLCJuaWNrbmFtZSI6IiIsImVtYWlsIjoiIiwidXNlcl9waWMiOiIiLCJpYXQiOjE2MzQ3NDM3MjcsImV4cCI6MTYzNDc3OTcyN30.T31Jczwq33CvPsXEUgr4MlJvU_IXMDakGRYRgHv2xKU
 
                 // 跳转到后台主页
-                location.href = '/大事件管理后台/web_bigevent/index.html'
+                location.href = '/index.html';
             }
         })
     })
