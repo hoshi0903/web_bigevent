@@ -4,5 +4,5 @@ $.ajaxPrefilter(function(options){
 
     options.url = 'http://api-breakingnews-web.itheima.net'+ options.url;
     // http://api-breakingnews-web.itheima.net/api/reguser
-    console.log(options.url);
+
 }) 

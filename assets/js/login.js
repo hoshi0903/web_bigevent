@@ -61,11 +61,16 @@ $(function(){
             // 快速获取表单中的数据
             data:$(this).serialize(),
             success:function(res){
+                console.log(res);
                 if(res.status !== 0) {
                     return layer.msg('登录失败！')
                 }
                 layer.msg('登录成功！')
+ 
                 console.log(res.token);
+
+                // 将登录成功得到的token字符串，保存到localStorage中
+                localStorage.setItem = ('token',res.token);
                 // Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDA0ODAsInVzZXJuYW1lIjoi6IOW57qiIiwicGFzc3dvcmQiOiIiLCJuaWNrbmFtZSI6IiIsImVtYWlsIjoiIiwidXNlcl9waWMiOiIiLCJpYXQiOjE2MzQ3NDM3MjcsImV4cCI6MTYzNDc3OTcyN30.T31Jczwq33CvPsXEUgr4MlJvU_IXMDakGRYRgHv2xKU
 
                 // 跳转到后台主页 记住斜线的写法
