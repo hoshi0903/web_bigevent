@@ -32,7 +32,6 @@ function getUserInfo() {
                     return layui.layer.msg('获取用户信息失败！')
                 } 
                 // 调用renderAvatar 渲染用户的头像
-                console.log(res);
                 renderAvatar(res.data)
         }
     })
@@ -56,7 +55,7 @@ function renderAvatar(user) {
         // 渲染文本头像
         $('.layui-nav-img').hide()
         var first = name[0].toUpperCase()//获取用户名第一个字符
-        console.log(first);
+        // console.log(first);
         $('.text-avatar').html(first).show()
     }
 }

@@ -8,7 +8,7 @@ $.ajaxPrefilter(function(options){
     // 先判断url是否有my(有权限的接口)
     if(options.url.indexOf('/my/') !== -1){
         options.headers = { Authorization: localStorage.getItem('token') ||''}
-        console.log(options.headers)
+        // console.log(options.headers)
     }
 
     // 全局统一挂载 complete 回调函数
