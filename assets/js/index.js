@@ -10,7 +10,7 @@ $(function() {
             // 1、清楚本地存储中的token
            localStorage.removeItem('token')
             //2、重新跳转到登录页面
-            location.href = '/web_bigevent/login.html'    
+            location.href = '/login.html'    
             // 关闭confirm 询问框
             layer.close(index)
         })

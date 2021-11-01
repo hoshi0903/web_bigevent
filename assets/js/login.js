@@ -74,7 +74,7 @@ $(function(){
                 // Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDA0ODAsInVzZXJuYW1lIjoi6IOW57qiIiwicGFzc3dvcmQiOiIiLCJuaWNrbmFtZSI6IiIsImVtYWlsIjoiIiwidXNlcl9waWMiOiIiLCJpYXQiOjE2MzQ3NDM3MjcsImV4cCI6MTYzNDc3OTcyN30.T31Jczwq33CvPsXEUgr4MlJvU_IXMDakGRYRgHv2xKU
 
                 // 跳转到后台主页 记住斜线的写法
-                location.href = '/web_bigevent/index.html';
+                location.href = '/index.html';
             }
         })
     })

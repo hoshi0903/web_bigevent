@@ -17,9 +17,7 @@
        <div class="layui-card-header">修改密码</div>
        <div class="layui-card-body">
            <!-- form表单区域 -->
-           <!-- 这是隐藏域 -->
-           <input type="hidden" name="id"/>
-        <form class="layui-form" lay-filter="formUserInfo">
+        <form class="layui-form">
             <div class="layui-form-item">
               <label class="layui-form-label">原密码</label>
               <div class="layui-input-block">
@@ -29,7 +27,7 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">新密码</label>
                 <div class="layui-input-block">
-                  <input type="text" name="newPwd" required  lay-verify="required|nikename|pwd|samepwd" placeholder="请输入新密码" autocomplete="off" class="layui-input">
+                  <input type="text" name="newPwd" required  lay-verify="required|pwd|samepwd" placeholder="请输入新密码" autocomplete="off" class="layui-input">
                 </div>
             </div>
             <div class="layui-form-item">
