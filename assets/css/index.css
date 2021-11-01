@@ -5,6 +5,12 @@
 .layui-icon {
     margin-right: 8px;
 }
+
+.layui-nav-child dd {
+    display: block;
+    height: 30px;
+}
+
 .layui-nav-child  .layui-icon {
     margin-right: 8px;
     margin-left: 20px;
