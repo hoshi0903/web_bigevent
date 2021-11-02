@@ -6,9 +6,14 @@
     margin-right: 8px;
 }
 
-.layui-nav-child dd {
-    display: block;
+.user-nav {
+    margin: 0;
+    padding: 0;
+    height: 90px;
+}
+.user-nav>dd {
     height: 30px;
+    line-height: 30px;
 }
 
 .layui-nav-child  .layui-icon {
