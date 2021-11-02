@@ -9,11 +9,11 @@
 .user-nav {
     margin: 0;
     padding: 0;
-    height: 90px;
+    height: 120px;
 }
 .user-nav>dd {
-    height: 30px;
-    line-height: 30px;
+    height: 40px;
+    line-height: 40px;
 }
 
 .layui-nav-child  .layui-icon {
