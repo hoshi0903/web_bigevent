@@ -13,8 +13,7 @@ $(function(){
                 if(res.status !== 0) {
                     return layer.msg('获取文章列表失败！');
                 }
-                console.log(res);
-                layer.msg('获取文章列表成功！');
+                // layer.msg('获取文章列表成功！');
                 var htmlStr = template('tpl-table',res);
                 $('tbody').html(htmlStr)
             }
@@ -22,9 +21,9 @@ $(function(){
     }
 
     // 给添加类别按钮绑定事件
+    var indexAdd = null;
     $('#btnAddCate').on('click',function(){
-        console.log('OK!');
-        layer.open({
+        indexAdd = layer.open({
             // type: 1 不带确定按钮的页面层 0是指信息框
             type: 1,
             // 弹出层宽高
@@ -33,6 +32,26 @@ $(function(){
             // 弹出层标题设置
             title: '在添加文章分类',
             content: $('#dialog-add').html()
-          });    
+          })    
     })
+
+    // 通过代理的形式，为form-add表单绑定submit事件，因为form-add是js动态添加的，在页面中是不存在的，要找存在的dom元素:body
+    $('body').on('submit','#form-add',function(e){
+        e.preventDefault()
+        $.ajax({
+            method: 'POST',
+            url: '/my/article/addcates',
+            data: $(this).serialize(),
+            success: function(res){
+                if(res.status !== 0) {
+                    return layer.msg('新增分类失败！')
+                }
+                initArtCateList()
+                layer.msg('新增分类成功！')
+                // 根据索引，关闭对应的弹出层
+                layer.close(indexAdd);
+            }
+        })
+    })
+
 })
