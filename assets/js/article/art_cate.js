@@ -20,4 +20,19 @@ $(function(){
             }
         })
     }
+
+    // 给添加类别按钮绑定事件
+    $('#btnAddCate').on('click',function(){
+        console.log('OK!');
+        layer.open({
+            // type: 1 不带确定按钮的页面层 0是指信息框
+            type: 1,
+            // 弹出层宽高
+            area: ['500px','250px'],
+
+            // 弹出层标题设置
+            title: '在添加文章分类',
+            content: $('#dialog-add').html()
+          });    
+    })
 })
