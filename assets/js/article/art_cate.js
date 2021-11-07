@@ -16,7 +16,6 @@ $(function(){
                 // layer.msg('获取文章列表成功！');
                 var htmlStr = template('tpl-table',res);
                 $('tbody').html(htmlStr)
-                console.log(res);
             }
         })
     }
