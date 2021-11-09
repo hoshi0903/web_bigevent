@@ -105,7 +105,7 @@ $(function(){
     //使用laypage.render()方法来渲染分页的结构
       laypage.render({
         elem: 'pageBox', //分页容器的id
-        count: 8, //总数据条数
+        count: total, //总数据条数
         limit: q.pagesize, //每页显示几条的条数
         curr: q.pagenum, //默认被选择的分页
         layout: ['count','limit','prev', 'page', 'next','skip'],
@@ -141,12 +141,12 @@ $(function(){
     layer.confirm('确认删除？', {icon: 3, title:'提示'}, function(index){
       $.ajax({
         method: 'GET',
-        url: '/my/article/dilete/ + id',
+        url: '/my/article/delete/' + id,
         success: function(res){
           if(res.status !== 0) {
             return layer.msg('删除文章失败！')
           }
-
+          layer.msg('删除文章成功！')
 
           // 当数据删除后，需要判断当前页是否还有剩余的数据如果没有则-1，跳到前一页，再调用initTable()
           if(len === 1){
